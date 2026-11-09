@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sponsor-challenge-mcp"
+version = "0.1.0"
+description = "面向 AI 互动直播的四个独立 MCP 服务"
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [{name = "Ranzevor"}]
+maintainers = [{name = "Ranzevor"}]
+keywords = ["mcp", "model-context-protocol", "bilibili", "stepfun", "minimax", "qwenwork", "vivix"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Operating System :: OS Independent",
+]
+dependencies = ["httpx>=0.27,<1", "jsonschema>=4.18,<5", "python-docx>=1.1,<2"]
+
+[project.urls]
+Homepage = "https://github.com/ranzevor/SponsorChallengeMCP"
+Repository = "https://github.com/ranzevor/SponsorChallengeMCP"
+Issues = "https://github.com/ranzevor/SponsorChallengeMCP/issues"
+Changelog = "https://github.com/ranzevor/SponsorChallengeMCP/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+sponsor-mcp = "sponsor_mcp.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"

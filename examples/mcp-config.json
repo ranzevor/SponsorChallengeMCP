@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "sponsor-stepfun": {
+      "command": "python",
+      "args": ["-m", "sponsor_mcp", "stepfun"]
+    },
+    "sponsor-minimax": {
+      "command": "python",
+      "args": ["-m", "sponsor_mcp", "minimax"]
+    },
+    "sponsor-qwenwork": {
+      "command": "python",
+      "args": ["-m", "sponsor_mcp", "qwenwork"]
+    },
+    "sponsor-vivix": {
+      "command": "python",
+      "args": ["-m", "sponsor_mcp", "vivix"]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+name: 缺陷报告
+description: 反馈 MCP 服务的可复现问题
+title: "bug: "
+body:
+  - type: dropdown
+    id: provider
+    attributes:
+      label: 受影响服务
+      options:
+        - 阶跃
+        - MiniMax
+        - 千问办公
+        - Vivix
+        - MCP 协议或打包
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤和实际结果
+      description: 使用合成输入；不要提交 API Key、真实会话令牌或用户数据。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为
+    validations:
+      required: true
